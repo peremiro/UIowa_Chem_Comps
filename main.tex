@@ -1,10 +1,9 @@
+%%%%%
+% This allows Latex to generate a tagged PDF and sets the document lenguague
+%%%%%
+\DocumentMetadata{tagging=on,tagging-setup={math/setup=mathml-SE}, lang=en}
+
 \documentclass[12pt]{article}
-
-%%%%%
-% This calls all the needed packages
-%%%%%
-
-\usepackage{style/comps}
 
 %%%%%
 % These define the title, author's name, advisor's name, and GAC members names
@@ -18,6 +17,12 @@
 \newcommand{\firstGAC}{Herky the Hawk}
 \newcommand{\secondGAC}{Herky the Hawk}
 \newcommand{\thirdGAC}{Herky the Hawk}
+
+%%%%%
+% This calls all the needed packages
+%%%%%
+
+\usepackage{style/comps}
 
 \begin{document}
 
@@ -62,6 +67,7 @@ Example of how to reference a figure in the text (Figure \ref{fig:1})
 \subsection*{This is a subsection}
 Example of how to reference a table in the text (Table \ref{tab:1})
 
+\tagpdfsetup{table/header-rows={1}}
 \begin{table}[ht]
     \centering
     \caption{This is a caption for a table.}

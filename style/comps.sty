@@ -21,7 +21,13 @@
 \usepackage[backend=biber, giveninits=true, maxbibnames=99, style=chem-acs, isbn=true, articletitle=true, doi=true]{biblatex}
 
 %Required to have the references DOIs as links
-\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex,
+            pdfauthor={\Author},
+            pdftitle={\Title},
+            pdfsubject={Chemistry},
+            pdfkeywords={Comprehensive Exam},
+            pdfproducer={Latex},
+            pdfcreator={pdflatex},hidelinks]{hyperref}
 
 %This is needed to add the border around the first page
 \usepackage{tikz}
@@ -60,6 +66,3 @@ texcount -sum -1 main.tex
 % Bold the date in the bibliography. This makes years in books and other non-article sources bold.
 \DeclareFieldFormat{date}{\mkbibbold{#1}}
 
-\usepackage{natbib}
-\setcitestyle{numbers}
-\setcitestyle{square}
