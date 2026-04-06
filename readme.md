@@ -5,7 +5,7 @@
 - In the main.tex replace the document title, student name, date, advisor's name, and the name of the remaining GAC members.
 
 ## Word Count
--
+- Use the %TC:ignore and %TC:endignore to define sections to be ignored in the word count. 
 
 ## Figures
 - Figures should be placed in the figures folder and inserted using \includegraphics (e.g., \includegraphics[alt={Alternative text for the image},width=0.75\linewidth]{figures/Figure1.jpg}) .
@@ -13,16 +13,9 @@
 - Figures should include a unique label (e.g., \label{fig:1}) between the \begin{figure} and \end{figure}. 
 - All figures should be placed where it appears in the document or the next page with the [ht] in the \begin{figures} (e.g., \begin{figures}[ht] ).
 
-
 ## Tables
-Tables should include a unique label (e.g., \label{tab:1}) between the \begin{table} and \end{table}. 
-All tables should be placed where it appears in the document or the next page with the [ht] in the \begin{table} (e.g., \begin{table}[ht] ).
-
-## Table Captions
-
-
-
-
+- Tables should include a unique label (e.g., \label{tab:1}) between the \begin{table} and \end{table}. 
+- All tables should be placed where it appears in the document or the next page with the [ht] in the \begin{table} (e.g., \begin{table}[ht] ).
   
 ## References
 - Add your references in BibTex format to the bibliography.bib.
@@ -32,4 +25,5 @@ All tables should be placed where it appears in the document or the next page wi
 - Check that all chemical formulas in the article's titles are correctly formated (e.g., subscripts and superscripts).
   
 ## Accessibility
-- The resulting PDF may lack the structural tags required for full compatibility with screen readers and other assistive technologies. For example, the final PDF file is untagged. Currently there is not a good solution to create tagged PDFs from Latex but the current template implements the ideas presented in a recent Overleaf article ( https://docs.overleaf.com/writing-and-editing/creating-accessible-pdfs). 
+- The resulting PDF must adhere to any required accessibility standards such as full compatibility with screen readers and other assistive technologies.  The current template implements the ideas presented in a recent Overleaf article ( https://docs.overleaf.com/writing-and-editing/creating-accessible-pdfs), however, the accessibity of the resulting PDF should be verified.
+- The PDF generated with the current template scores 100% in the Ally Course Accessibility Report. 
