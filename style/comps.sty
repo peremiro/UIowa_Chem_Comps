@@ -1,0 +1,65 @@
+%
+%
+%
+
+%Required to set the font
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath} 
+\usepackage{lmodern}
+
+%Avoids indentation at the begining of each paragraph
+\setlength\parindent{0pt}
+
+%Set double spacing for the whole document
+\usepackage{setspace}
+\doublespacing      
+
+%Sets the paper size to letter and sets the margins to 1 inch 
+\usepackage[letterpaper, margin= 1in]{geometry}
+
+%This selects the reference format
+\usepackage[backend=biber, giveninits=true, maxbibnames=99, style=chem-acs, isbn=true, articletitle=true, doi=true]{biblatex}
+
+%Required to have the references DOIs as links
+\usepackage[hidelinks]{hyperref}
+
+%This is needed to add the border around the first page
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+%This is needed to have the date in the title page
+\usepackage[nodayofweek,level]{datetime}
+
+%This counts the number of words in the document. A specific name is used (main.tex) but this can be changed.
+\usepackage{bashful}
+\bash
+texcount -sum -1 main.tex
+\END
+
+%This adds the bibliography file
+\addbibresource{bibliography.bib}
+
+%This sets the captions spacing to be the same as the rest of the document.
+\usepackage{caption}
+\captionsetup{font={stretch=1.5}}
+
+%This sets the table contents to be the same as the rest of the document.
+\renewcommand{\arraystretch}{1.5}
+
+%Make the figure and table labels bolded.
+\usepackage[labelfont=bf]{caption}
+
+%This makes all math in the document not be in italics.
+\usepackage[LGRgreek]{mathastext}
+
+%This will clear all biblographic fields that are usually problematic since they do not need to included in the references. Additional ones can be added if needed.
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+% Bold the date in the bibliography. This makes years in books and other non-article sources bold.
+\DeclareFieldFormat{date}{\mkbibbold{#1}}
+
+\usepackage{natbib}
+\setcitestyle{numbers}
+\setcitestyle{square}

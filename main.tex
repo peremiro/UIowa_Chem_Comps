@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+
+%%%%%
+% This calls all the needed packages
+%%%%%
+
+\usepackage{style/comps}
+
+%%%%%
+% These define the title, author's name, advisor's name, and GAC members names
+%%%%%
+
+\newcommand{\Title}{Awesome Title That Is Very Very Long so Long That It Is Two Lines}
+
+\newcommand{\Author}{Herky the Hawk}
+
+\newcommand{\Advisor}{Herky the Hawk}
+\newcommand{\firstGAC}{Herky the Hawk}
+\newcommand{\secondGAC}{Herky the Hawk}
+\newcommand{\thirdGAC}{Herky the Hawk}
+
+\begin{document}
+
+%%%%%
+% This generates the cover page
+%%%%%
+
+\include{style/cover}
+
+%%%%%
+% This is the start of the comps document. Read the readme.md file for details regarding how insert images and tables, cite bibliography, etc.
+%%%%%
+
+\section*{Introduction}
+Concise discussion of research problem and critical summary of the relevant literature adequate to identify the state of knowledge in the field and to justify the working hypothesis about the research question (2 pages).
+
+\section*{Goals and Specific Aims}
+Explicit statement of the overarching goals of the student’s research project. Objectives and/or working hypothesis(es) for the research question(s) should be clearly articulated and expressed. It must be clear that the research is motivated by the current state of knowledge in the field based on the background information presented in the introduction and that the hypothesis is testable (1 paragraph).
+
+\section*{Research Plan}
+This section should include a description of the research methodology, the anticipated results if the working hypothesis is correct and alternative outcomes that can be anticipated if the working hypothesis is invalid. This section should also present the progress to date on the research plan that is outlined including a presentation of the data that have been collected thus far, the analysis and interpretation of those data, and the initial conclusions that may be drawn from that work (6-7 pages).
+
+\subsection*{This is a subsection}
+Example of an article citation.\autocite{le}
+
+Example of a book citation.\autocite{cramer}
+
+Example of a patent citation.\autocite{song}
+
+Example of a website citation.\autocite{Astley}
+
+\subsection*{This is a subsection}
+Example of how to reference a figure in the text (Figure \ref{fig:1})
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[alt={Alternative text for the image},width=0.5\linewidth]{figures/Figure1.jpg}
+    \caption{This is a caption for a figure.}
+    \label{fig:1}
+\end{figure} 
+
+\subsection*{This is a subsection}
+Example of how to reference a table in the text (Table \ref{tab:1})
+
+\begin{table}[ht]
+    \centering
+    \caption{This is a caption for a table.}
+    %This ignores the table values from the word count. 
+    %TC:ignore  
+    
+    \begin{tabular}{ccccc}
+    \hline
+    \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} & \textbf{Column 4} & \textbf{Column 5} \\
+    \hline
+    Line 1 & a & b & c & d \\
+    Line 2 & e & f & g & h \\
+    Line 3 & i & j & k & l  \\
+    Line 4 & m & n & o & p \\
+    Line 5 & q & r & s & t \\
+    \hline
+    \end{tabular}
+    \label{tab:1}
+    
+    %TC:endignore     
+\end{table}
+
+\section*{Conclusions and Future Work}
+Description of the current state of the project and foreseeable future plans for progress toward completion of the research goals (2-3 pages).
+
+%TC:ignore 
+\vspace{0.85cm}
+\textbf{Word Count:} \bashStdout
+
+\vspace{0.5cm}
+\textbf{Generative AI:} Generative AI, specifically the 2.5 Flash and 2.5 Pro models of Google Gemini, were used in the revision process alongside peer review. The largest use of AI tools for this document was to take paragraphs that I had written and trim them to help meet the word count. These tools were also used to check for both grammatical and spelling errors.
+
+\printbibliography
+%TC:endignore 
+
+\end{document}

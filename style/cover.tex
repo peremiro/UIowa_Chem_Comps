@@ -1,0 +1,50 @@
+\begin{titlepage}
+%This ignores the contents of the cover page from the word count. 
+%TC:ignore
+
+\centering
+\begin{tikzpicture}[overlay,remember picture]
+    \draw [line width=1mm]
+        ($ (current page.north west) + (1.5cm,-1.5cm) $)
+        rectangle
+        ($ (current page.south east) + (-1.5cm,1.5cm) $);
+\end{tikzpicture}
+
+
+\begin{figure}
+    \vspace{0.8cm}
+    \centering
+    \includegraphics[width=0.30\linewidth]{style/logo.jpg}
+\end{figure}
+\huge
+\textbf{\Title}
+
+\vspace{0.4cm}
+\Large
+\Author
+\vspace{0.4cm}
+
+\today
+\large
+
+% If your title is one line use the top and comment the bottom. If your title is two lines use the bottom and comment the top.
+%\vspace{2.8cm}
+\vspace{1.8cm}
+
+\textbf{Research Advisor} \\
+Prof. \Advisor \\ 
+\vspace{0.4cm}
+\textbf{Committee Members} \\
+Prof. \firstGAC \\
+Prof. \secondGAC \\
+Prof. \thirdGAC \\
+%TC:endignore 
+
+\end{titlepage}
+\newpage
+
+%Set the same font for the DOI links
+\urlstyle{same}
+
+%This sets the page number correctly since the title page does not include the page number
+\setcounter{page}{2}
